@@ -1,4 +1,6 @@
-
+/**
+ * @author Amigos y Mendi-gos. 
+ */
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -6,7 +8,9 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 public class Ejercicio1 {
+	
 	public static void main(String[] args) throws IOException {
+		
 		Scanner sc = new Scanner(System.in);
 		Scanner scv = new Scanner(System.in);
 		String DNI;
@@ -18,6 +22,8 @@ public class Ejercicio1 {
 			char letra = 0;
 			String numeros = DNI.substring(0, DNI.length() - 1);
 			int numeros1 = 0;
+			
+			//se prueba el codigo
 			try {
 				numeros1 = Integer.parseInt(numeros);
 			} catch (NumberFormatException excepcion) {
@@ -28,6 +34,8 @@ public class Ejercicio1 {
 			} catch (IndexOutOfBoundsException excepcion2) {
 				System.out.println("DNI muy corto");
 			}
+			
+			//prueba de asignacion de letra
 			int resto = numeros1 % 23;
 			String mapa = "TRWAGMYFPDXBNJZSQVHLCKE";
 			char posicion = mapa.charAt(resto);
